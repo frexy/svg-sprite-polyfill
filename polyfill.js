@@ -12,6 +12,7 @@
     
     // load sprite svg using AJAX
     var loadSprite = function (file, cb) {
+        console.log('loadSprite now');
         var x = new (XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
         x.open('GET', file, 1);
         // 
@@ -31,7 +32,7 @@
             if (!symbol) {
                 return void(0);
             } else {
-                // e.parentNode.setAttribute('viewBox', symbol.getAttribute('viewBox'));
+                e.parentNode.setAttribute('viewBox', symbol.getAttribute('viewBox'));
                 e.parentNode.replaceChild((function (nodes, frag) {
                     Array.prototype.forEach.call(nodes, function (n) {
                         frag.appendChild(n.cloneNode(true));
@@ -40,7 +41,7 @@
                 })(symbol.childNodes, document.createDocumentFragment()), e);
                 return void(0);
             }
-        })(document.getElementById(uri.substring(1)));
+        })(document.getElementById(uri));
     }; 
 
     var createScanner = function (loaded) {
@@ -55,31 +56,33 @@
                     })()                        :
 
                     (function (href) {
-                        return (href[0] == '#') ? void(0) : (function (parts) {
-                            
-                            return (function (uri, hash) {
-                                // if the file hasn't been loaded before,
-                                // load it into DOM
-                                scanEle(n                               ,
-                                    l.indexOf(uri) > -1                 ?
-                                    (function () {
-                                        modifyElement(n[counter], hash);
-                                        return l;
-                                    })()                                :
-                                    (function () {
-                                        return l.concat([
-                                            loadSprite(uri, function () {
-                                                // now modify the e element
-                                                return modifyElement(n[counter], hash);
-                                            })
-                                        ]);
-                                    })()                                ,
-                                    (counter + 1)
-                                );
-                                return void(0);
-                            })(parts[0], parts[1]);
+                        return (href[0] == '#')                          ?
+                            modifyElement(n[counter], href.substring(1)) : 
+                            (function (parts) {
+                                return (function (uri, hash) {
+                                    // if the file hasn't been loaded before,
+                                    // load it into DOM
+                                    scanEle(n                               ,
+                                        l.indexOf(uri) > -1                 ?
+                                        (function () {
+                                            modifyElement(n[counter], hash);
+                                            return l;
+                                        })()                                :
+                                        (function () {
+                                            return l.concat([
+                                                loadSprite(uri, function () {
+                                                    // now modify the e element
+                                                    console.log('modify it');
+                                                    return modifyElement(n[counter], hash);
+                                                })
+                                            ]);
+                                        })()                                ,
+                                        (counter + 1)
+                                    );
+                                    return void(0);
+                                })(parts[0], parts[1]);
 
-                        })(href.split('#'));
+                            })(href.split('#'));
 
                     })(n[counter].getAttribute('xlink:href'));
 

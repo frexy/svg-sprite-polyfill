@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg">
+	<symbol viewBox="0 0 23 17" id="si-stroke-abulance">
+		<title>Abulance</title>
+		<g transform="translate(1 1)" stroke="#414042" stroke-width="2" fill="none">
+			<path d="M14 13h-7" class="si-stroke-abulance-main si-stroke-abulance-thick si-stroke-abulance-stroke si-stroke-stroke" stroke="#ec2f2f" stroke-width="3"/>
+			<path d="M3 13h-1c-1.104 0-2-.896-2-2v-8c0-1.104.896-2 2-2h14c1.104 0 5 4.896 5 6v4c0 1.104-.896 2-2 2h-1" class="si-stroke-abulance-main si-stroke-abulance-thick si-stroke-abulance-stroke si-stroke-stroke" stroke="#ec2f2f" stroke-width="3"/>
+			<circle cx="5" cy="13" r="2" class="si-stroke-abulance-wheel si-stroke-abulance-thick si-stroke-abulance-stroke si-stroke-stroke" stroke="#ec2f2f" stroke-width="3"/>
+			<circle cx="16" cy="13" r="2" class="si-stroke-abulance-wheel si-stroke-abulance-thick si-stroke-abulance-stroke si-stroke-stroke" stroke="#ec2f2f" stroke-width="3"/>
+			<path d="M5 6h6" class="si-stroke-abulance-cross si-stroke-abulance-thick si-stroke-abulance-stroke si-stroke-stroke" stroke="#ec2f2f" stroke-width="3"/>
+			<path d="M8 3v6" class="si-stroke-abulance-cross si-stroke-abulance-thick si-stroke-abulance-stroke si-stroke-stroke" stroke="#ec2f2f" stroke-width="3"/>
+			<path d="M14 4h5" class="si-stroke-abulance-window si-stroke-abulance-thick si-stroke-abulance-stroke si-stroke-stroke" stroke="#ec2f2f" stroke-width="3"/>
+			<path d="M11 0h2" class="si-stroke-abulance-light si-stroke-abulance-thick si-stroke-abulance-stroke si-stroke-stroke" stroke="#ec2f2f" stroke-width="3"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 23 20" id="si-stroke-box-full">
+		<title>Box-full</title>
+		<g stroke="#414042" stroke-width="2" fill="none">
+			<path d="M22 18c0 .553-.447 1-1 1h-19c-.553 0-1-.447-1-1v-5l3-11c0-.553.447-1 1-1h13c.553 0 1 .447 1 1l3 11v5zM2 14h7v1h5v-1h7" id="Shape" class="si-stroke-box-full-box si-stroke-box-full-thick si-stroke-box-full-stroke si-stroke-stroke" stroke-width="1" stroke="#2860e5"/>
+			<path d="M4 10h15M5 7h13M6 4h11" class="si-stroke-box-full-line si-stroke-box-full-thick si-stroke-box-full-stroke si-stroke-stroke" stroke-width="1" stroke="#2860e5"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 62 57" id="si-duo-website-add">
+		<title>Website-add</title>
+		<g fill="none">
+			<path d="M42 48h-41v-47h60v47h-3" id="Shape" stroke="#6D6E71" class="si-duo-website-add-frame si-duo-website-add-stroke si-duo-website-add-base si-duo-stroke si-duo-base"/>
+			<path d="M0 9h62" id="Shape" stroke="#1396D7" class="si-duo-website-add-bar si-duo-website-add-stroke si-duo-website-add-accent si-duo-stroke si-duo-accent"/>
+			<path d="M49 5h6" id="Shape" stroke="#6D6E71" class="si-duo-website-add-line3 si-duo-website-add-line si-duo-website-add-stroke si-duo-website-add-base si-duo-stroke si-duo-base"/>
+			<path d="M37 5h6" id="Shape" stroke="#6D6E71" class="si-duo-website-add-line2 si-duo-website-add-line si-duo-website-add-stroke si-duo-website-add-base si-duo-stroke si-duo-base"/>
+			<path d="M6 5h24" id="Shape" stroke="#6D6E71" class="si-duo-website-add-line1 si-duo-website-add-line si-duo-website-add-stroke si-duo-website-add-base si-duo-stroke si-duo-base"/>
+			<path d="M7 19h15M7 27h31M7 35h31" id="Shape" stroke="#6D6E71" class="si-duo-website-add-text si-duo-website-add-stroke si-duo-website-add-base si-duo-stroke si-duo-base"/>
+			<path d="M58 45h-5v-5h-6v5h-5v6h5v5h6v-5h5v-6z" stroke="#6D6E71" class="si-duo-website-add-add si-duo-website-add-stroke si-duo-website-add-base si-duo-stroke si-duo-base"/>
+		</g>
+	</symbol>
+	<symbol viewBox="0 0 62 55" id="si-duo-website-checked">
+		<title>Website-checked</title>
+		<g stroke-width="2" fill="none">
+			<path stroke="#6D6E71" d="M41.004 48h-40.004v-47h60v47h-8.998" class="si-duo-website-checked-frame si-duo-website-checked-stroke si-duo-website-checked-base si-duo-stroke si-duo-base"/>
+			<path stroke="#1396D7" d="M0 9h62" class="si-duo-website-checked-bar si-duo-website-checked-stroke si-duo-website-checked-accent si-duo-stroke si-duo-accent"/>
+			<path stroke="#6D6E71" d="M49 5h6" class="si-duo-website-checked-line3 si-duo-website-checked-line si-duo-website-checked-stroke si-duo-website-checked-base si-duo-stroke si-duo-base"/>
+			<path stroke="#6D6E71" d="M37 5h6" class="si-duo-website-checked-line2 si-duo-website-checked-line si-duo-website-checked-stroke si-duo-website-checked-base si-duo-stroke si-duo-base"/>
+			<path stroke="#6D6E71" d="M6 5h24" class="si-duo-website-checked-line1 si-duo-website-checked-line si-duo-website-checked-stroke si-duo-website-checked-base si-duo-stroke si-duo-base"/>
+			<path stroke="#6D6E71" d="M7 19h15" class="si-duo-website-checked-text si-duo-website-checked-stroke si-duo-website-checked-base si-duo-stroke si-duo-base"/>
+			<path stroke="#6D6E71" d="M7 27h31" class="si-duo-website-checked-text si-duo-website-checked-stroke si-duo-website-checked-base si-duo-stroke si-duo-base"/>
+			<path stroke="#6D6E71" d="M7 35h31" class="si-duo-website-checked-text si-duo-website-checked-stroke si-duo-website-checked-base si-duo-stroke si-duo-base"/>
+			<path stroke="#6D6E71" d="M53.849 38l-7.071 7.071-3.535-3.535-4.243 4.242 7.778 7.779 11.314-11.314-4.243-4.243z" class="si-duo-website-checked-checked si-duo-website-checked-stroke si-duo-website-checked-base si-duo-stroke si-duo-base"/>
+		</g>
+	</symbol>
+</svg>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Polyfill</title>
+        <style>
+            .icon {
+                width: 32px;
+            }
+            .icon * {
+                stroke: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="sprite.svg#si-stroke-box-full" /></svg> 
+    </body>
+    <script src="../polyfill.js"></script>
+
+    <script type="text/javascript">
+    var test = function (link) {
+        var div = document.createElement('div'); 
+        div.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="icon"><use xlink:href="' + link + '" /></svg>';
+        document.body.appendChild(div);
+    };
+    
+    //
+    setTimeout(function () {
+        test('sprite.svg#si-duo-website-checked');
+    }, 2000);
+
+    setTimeout(function () {
+        test('#si-stroke-abulance');
+    }, 3000);
+
+    </script>
+
+</html>
