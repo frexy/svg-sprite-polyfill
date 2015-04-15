@@ -6,3 +6,5 @@ This polyfill's purpose is to fix a bug on Webkit-based browsers (Chrome, Safari
 
 There's no need for this on Firefox.
 
+## TODOS
+*   Only activate on IE and Chrome
