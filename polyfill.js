@@ -12,7 +12,6 @@
     
     // load sprite svg using AJAX
     var loadSprite = function (file, cb) {
-        console.log('loadSprite now');
         var x = new (XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
         x.open('GET', file, 1);
         // 
@@ -72,7 +71,6 @@
                                             return l.concat([
                                                 loadSprite(uri, function () {
                                                     // now modify the e element
-                                                    console.log('modify it');
                                                     return modifyElement(n[counter], hash);
                                                 })
                                             ]);
