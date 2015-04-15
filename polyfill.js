@@ -55,8 +55,8 @@
                     })()                        :
 
                     (function (href) {
-                        return (href[0] == '#')                          ?
-                            modifyElement(n[counter], href.substring(1)) : 
+                        return (href[0] == '#')                             ?
+                            modifyElement(n[counter], href.substring(1))    : 
                             (function (parts) {
                                 return (function (uri, hash) {
                                     // if the file hasn't been loaded before,
