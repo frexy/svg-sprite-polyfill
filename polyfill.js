@@ -1,4 +1,4 @@
-(function (requestAnimationFrame) {
+(function (requestAnimationFrame, active) { 
     // create a sprite svg element and hide it somewhere
     var createSpriteElement = function (url, svgText) {
         var wrap            = document.createElement('span');
@@ -87,6 +87,15 @@
             })(document.getElementsByTagName('use'), loaded, 0); 
         };
     };
-
-    createScanner([])();
-})(window.requestAnimationFrame || window.setTimeout);
+    
+    return active ? createScanner([])() : void(0);
+})(
+    (window.requestAnimationFrame || function (fn) {
+            window.setTimeout(fn, 300);
+        }),
+    (
+        /MSIE\b/.test(navigator.userAgent)       ||
+	    /Trident\b/.test(navigator.userAgent)    || 
+        /AppleWebKit\/(\d+)/.test(navigator.userAgent)  
+    )
+);
