@@ -67,14 +67,14 @@
                                             modifyElement(n[counter], hash);
                                             return l;
                                         })()                                :
-                                        (function () {
+                                        (function (e) {
                                             return l.concat([
                                                 loadSprite(uri, function () {
                                                     // now modify the e element
-                                                    return modifyElement(n[counter], hash);
+                                                    return modifyElement(e, hash);
                                                 })
                                             ]);
-                                        })()                                ,
+                                        })(n[counter])                      ,
                                         (counter + 1)
                                     );
                                     return void(0);
