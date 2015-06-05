@@ -1,4 +1,4 @@
-(function (requestAnimationFrame, active) { 
+(function (requestAnimationFrame, active) {
     // create a sprite svg element and hide it somewhere
     var createSpriteElement = function (url, svgText) {
         var wrap            = document.createElement('span');
@@ -6,15 +6,15 @@
         wrap.style.display  = 'none';
 
         // append
-        document.body.appendChild(wrap);
+        document.body.insertBefore(wrap, document.body.firstChild);
         return;
     };
-    
+
     // load sprite svg using AJAX
     var loadSprite = function (file, cb) {
         var x = new (XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
         x.open('GET', file, 1);
-        // 
+        //
         x.onreadystatechange = function () {
             if (x.readyState > 3) {
                 createSpriteElement(file, x.responseText);
@@ -24,8 +24,8 @@
         };
         x.send();
         return file;
-    }; 
-    
+    };
+
     var modifyElement = function (e, uri) {
         return (function (symbol) {
             if (!symbol) {
@@ -41,13 +41,13 @@
                 return void(0);
             }
         })(document.getElementById(uri));
-    }; 
+    };
 
     var createScanner = function (loaded) {
         return function () {
             (function scanEle(n, l, counter) {
                 return counter >= n.length      ?
-                    
+
                     (function () {
                         // setup next scanner
                         requestAnimationFrame(createScanner(l));
@@ -56,7 +56,7 @@
 
                     (function (href) {
                         return (href[0] == '#')                             ?
-                            modifyElement(n[counter], href.substring(1))    : 
+                            modifyElement(n[counter], href.substring(1))    :
                             (function (parts) {
                                 return (function (uri, hash) {
                                     // if the file hasn't been loaded before,
@@ -84,10 +84,10 @@
 
                     })(n[counter].getAttribute('xlink:href'));
 
-            })(document.getElementsByTagName('use'), loaded, 0); 
+            })(document.getElementsByTagName('use'), loaded, 0);
         };
     };
-    
+
     return active ? createScanner([])() : void(0);
 })(
     (window.requestAnimationFrame || function (fn) {
@@ -95,7 +95,7 @@
         }),
     (
         /MSIE\b/.test(navigator.userAgent)       ||
-	    /Trident\b/.test(navigator.userAgent)    || 
-        /AppleWebKit\/(\d+)/.test(navigator.userAgent)  
+	    /Trident\b/.test(navigator.userAgent)    ||
+        /AppleWebKit\/(\d+)/.test(navigator.userAgent)
     )
 );
