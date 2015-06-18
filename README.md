@@ -1,7 +1,6 @@
-# SVG Sprite Polyfill
+# Deprecated
 
-Icon system using SVG sprite can be archived with the method described in this article: https://css-tricks.com/svg-symbol-good-choice-icons/
+THIS SCRIPT EXISTED BECAUSE OF A MISTAKE. SUPPORTING CSS FOR XLINKED ELEMENTS IS NOT A FEATURE OF FIREFOX BUT A BUG.
 
-This polyfill's purpose is to fix a bug on Webkit-based browsers (Chrome, Safari and the like) that makes it unable to style icons with usual CSS.
+WE ARE WORKING ON A BETTER VERSION WHICH IS STANDARD COMPATIBLE.
 
-There's no need for this on Firefox.
