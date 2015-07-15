@@ -3,7 +3,9 @@
     var createSpriteElement = function (url, svgText) {
         var wrap            = document.createElement('span');
         wrap.innerHTML      = svgText;
-        wrap.style.display  = 'none';
+        wrap.style.display  = 'block';
+        wrap.style.height   = 0;
+        wrap.style.width    = 0;
 
         // append
         document.body.insertBefore(wrap, document.body.firstChild);
